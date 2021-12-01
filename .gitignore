@@ -20,3 +20,4 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+input.txt
