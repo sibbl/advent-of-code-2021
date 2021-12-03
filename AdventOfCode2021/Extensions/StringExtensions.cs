@@ -1,14 +1,6 @@
 ﻿public static class StringExtensions
 {
     /// <summary>
-    /// Converts input like binary '1010' to 10
-    /// </summary>
-    /// <param name="input">Binary representation of input</param>
-    /// <returns>Integer representation of binary input</returns>
-    public static int ToIntegerFromBinary(this string input)
-        => Convert.ToInt32(input, 2);
-
-    /// <summary>
     /// Replace characters by specified map, where key will be replaced by value
     /// </summary>
     /// <param name="input">String to replace characters in</param>

@@ -36,4 +36,16 @@
         => enumerable.Select(filter).Aggregate(1L, (a, b) => a * b);
     public static long Multiply<T>(this IEnumerable<T> enumerable, Func<T, int, long> filter)
         => enumerable.Select(filter).Aggregate(1L, (a, b) => a * b);
+
+    public static T GetMostOccurringElement<T>(this IEnumerable<T> enumerable)
+        => GetMostOccurringElement<T>(enumerable, out _);
+
+    public static T GetMostOccurringElement<T>(this IEnumerable<T> enumerable, out int count)
+    {
+        (var key, count) = enumerable
+            .GroupBy(x => x).OrderByDescending(x => x.Count())
+            .Select(x => (x.Key, x.Count()))
+            .First();
+        return key;
+    }
 }
