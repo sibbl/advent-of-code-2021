@@ -92,4 +92,16 @@
         }
     }
 
+    public static IEnumerable<T> ToEnumerable<T>(this T[,] array)
+    {
+        foreach (var x in array) yield return x;
+    }
+    public static IEnumerable<T> ToEnumerable<T>(this T[,,] array)
+    {
+        foreach (var x in array) yield return x;
+    }
+    public static IEnumerable<T> ToEnumerable<T>(this T[,,,] array)
+    {
+        foreach (var x in array) yield return x;
+    }
 }

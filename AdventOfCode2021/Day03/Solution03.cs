@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using MoreLinq;
+﻿using MoreLinq;
 
 public static class Solution03
 {
